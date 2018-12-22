@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block result %}
+<div class="tz-gallery">
+    <div class="container gallery-container">
+        <p class="page-description text-center">Depth estimation of the picture {{datas.default_image}}</p>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href={{ datas.default_image }}>
+                        <img src={{ datas.default_image }} alt="Default image">
+                    </a>
+                    <div class="caption">
+                        <h3>The original photo</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href={{ datas.depth_map }}>
+                        <img src={{ datas.depth_map }} alt="Depth Map">
+                    </a>
+                    <div class="caption">
+                        <h3>The Depth Map without post processing</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href={{ datas.depth_map_pp }}>
+                        <img src={{ datas.depth_map_pp }} alt="Depth Map with post processing">
+                    </a>
+                    <div class="caption">
+                        <h3>The Depth Map with post processing</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block title %}
+    Result
+{% endblock %}

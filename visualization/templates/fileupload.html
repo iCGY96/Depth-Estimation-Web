@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block fileupload %}
+<p class="page-description text-center">Select the image to upload</p>
+<form method="post" role="form" enctype="multipart/form-data">
+    <input id="input-1" name="input-1" type="file" class="file">
+</form>
+{% endblock %}
+{% block title %}
+    Image-upload
+{% endblock %}
